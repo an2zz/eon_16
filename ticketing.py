@@ -73,7 +73,7 @@ class travel:
         
         
         for j in range(20):
-            if int(ttime1) == ticket_list1[find_ind] == int(ticket_list[j][0]) and ticketing[2] == ticket_list[j][1] and ticketing[3] == ticket_list[j][2] and ticketing[4] == ticket_list[j][3]:
+            if ticket_list1[find_ind] == int(ticket_list[j][0]) and ticketing[2] == ticket_list[j][1] and ticketing[3] == ticket_list[j][2] and ticketing[4] == ticket_list[j][3]:
                 print(ticket[j])
                 
                 while True:
