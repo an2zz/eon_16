@@ -85,12 +85,11 @@ class travel:
                             treservation.append(ticket[j])
                             ticket[j][5] = int(ticket[j][5]) - 1 
                             
-                            ttreservation.append(j)
+                            
                             print("\n예매가 완료되었습니다.")
                             self.res_menu()
-                            if ticket[j][5] == 0:
-                                ticket[j][5] = "매진"
-                        
+                           
+                                
                         else:
                             print("매진")
                         
@@ -102,6 +101,9 @@ class travel:
     def menu2(self):
         print(">>>전체 기차 시간표를 출력합니다 1번을 눌러주세요.")
         alltime = int(input("입력 : "))
+        for k in range(20):
+            if ticket[k][5] == 0:
+                ticket[k][5] = "매진"
         if alltime == 1:
             i = 0
             while i < len(ticket):
