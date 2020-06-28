@@ -1,5 +1,5 @@
 import os
-import book 
+import book_2
 
 this_folder = os.path.dirname(os.path.abspath(__file__))
 my_file = os.path.join(this_folder,'input.txt')
@@ -9,7 +9,7 @@ dictionary = f.readlines()
 class yes24:
     
     def __init__(self):
-        self.aladin_clss = book.funtion()
+        self.aladin_clss = book_2.aladin()
     
     def Menu_List(self):
         print("1. 도서추가")
