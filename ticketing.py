@@ -119,18 +119,19 @@ class travel:
     def menu3(self):
         print(">>>1. 예매확인 2. 예매취소 ")
         check_and_cancel = int(input("입력 : "))
+        for k in range(20):
+            if ticket[k][5] == 0:
+                ticket[k][5] = "매진"
         if check_and_cancel == 1:
             print(">> 예매확인")
             print(treservation)
         elif check_and_cancel == 2:
-            if ticket[ttreservation[len(ttreservation) - 1]][5] == '매진':
-                ticket[ttreservation[len(ttreservation) - 1]][5] = 1
-                treservation.pop()
+            if ticket[k][5] == '매진':
+                ticket[k][5] = 1
             else:
-                ticket[ttreservation[len(ttreservation) - 1]][5] = ticket[ttreservation[len(ttreservation) - 1]][5] + 1
-                treservation.pop()
-                ttreservation.pop()
-                print("예약이 취소되었습니다.")  
+                ticket[k][5] = ticket[k][5] + 1
+                
+            print("예약이 취소되었습니다.")  
         else :
             self.res_menu()
 
